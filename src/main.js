@@ -19,6 +19,9 @@ import {
   OptionGroup,
   Button,
   ButtonGroup,
+  Checkbox,
+  CheckboxButton,
+  CheckboxGroup,
   Popover,
   Tooltip,
   Form,
@@ -53,6 +56,9 @@ Vue.use(Option)
 Vue.use(OptionGroup)
 Vue.use(Button)
 Vue.use(ButtonGroup)
+Vue.use(Checkbox)
+Vue.use(CheckboxButton)
+Vue.use(CheckboxGroup)
 Vue.use(Popover)
 Vue.use(Tooltip)
 Vue.use(Form)
