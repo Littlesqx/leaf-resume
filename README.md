@@ -22,6 +22,6 @@ The resume theme is modifed from [@salomonelli - best-resume-ever/purple](https:
 
 Also, this project is based on the following packages
 
-[Vue](htts://vuejs.org)
+[Vue](https://vuejs.org)
 
 [Element](http://element.eleme.io)
