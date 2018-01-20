@@ -7,7 +7,8 @@
                         <span>基础信息</span>
                     </div>
                     <el-form-item :label="item.label" v-for="(item, index) in profile" :key="index">
-                        <el-input v-model="item.value"></el-input>
+                      <el-input type="textarea" v-if="item.key === 'about'" v-model="item.value" :rows="3"></el-input>
+                      <el-input v-model="item.value" v-else></el-input>
                     </el-form-item>
                 </el-form>
             </el-tab-pane>
@@ -37,10 +38,7 @@
                 <div class="topic">
                     <span>技能清单</span>
                     <div class="option">
-                      <el-popover
-                        ref="popover"
-                        placement="right"
-                        trigger="click">
+                      <el-popover ref="popover" placement="right" trigger="click">
                         <el-form :inline="true">
                           <el-form-item>
                             <el-input v-model="skill"></el-input>

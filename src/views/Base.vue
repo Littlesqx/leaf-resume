@@ -32,7 +32,10 @@
     </el-header>
     <el-container class="main">
         <left-aside :profile="profile" :experiences="experiences" :skills="skills" :form="form"></left-aside>
-        <el-main>Main</el-main>
+        <el-main>
+          <line-theme :options="resumeOptions()"></line-theme>
+        </el-main>
+        <float-button></float-button>
     </el-container>
   </el-container>
 </template>
@@ -41,6 +44,8 @@
 
 import HeadMenu from '../components/HeadMenu.vue'
 import LeftAside from '../components/LeftAside.vue'
+import LineTheme from '../components/resume/line.vue'
+import FloatButton from '../components/FloatButton.vue'
 import config from '../config'
 
 export default {
@@ -57,10 +62,20 @@ export default {
     }
   },
   methods: {
-    // eslint-disable-next-line
+    resumeOptions () {
+      let profile = {}
+      for (const x of this.profile) {
+        profile[x.key] = x.value
+      }
+      return {
+        profile,
+        experiences: this.experiences,
+        skills: this.form.skills
+      }
+    }
   },
   components: {
-    HeadMenu, LeftAside
+    HeadMenu, LeftAside, LineTheme, FloatButton
   },
   created () {
     // eslint-disable-next-line
