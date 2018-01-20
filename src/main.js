@@ -14,7 +14,7 @@ import {
   MenuItemGroup,
   Input,
   InputNumber,
-  Select,
+  // Select,
   Option,
   OptionGroup,
   Button,
@@ -23,16 +23,16 @@ import {
   CheckboxButton,
   CheckboxGroup,
   Popover,
-  Tooltip,
+  // Tooltip,
   Form,
   FormItem,
   Tabs,
   TabPane,
-  Slider,
+  // Slider,
   Icon,
   Row,
   Col,
-  Badge,
+  // Badge,
   Card,
   Container,
   Header,
@@ -51,7 +51,7 @@ Vue.use(MenuItem)
 Vue.use(MenuItemGroup)
 Vue.use(Input)
 Vue.use(InputNumber)
-Vue.use(Select)
+// Vue.use(Select)
 Vue.use(Option)
 Vue.use(OptionGroup)
 Vue.use(Button)
@@ -60,16 +60,16 @@ Vue.use(Checkbox)
 Vue.use(CheckboxButton)
 Vue.use(CheckboxGroup)
 Vue.use(Popover)
-Vue.use(Tooltip)
+// Vue.use(Tooltip)
 Vue.use(Form)
 Vue.use(FormItem)
 Vue.use(Tabs)
 Vue.use(TabPane)
-Vue.use(Slider)
+// Vue.use(Slider)
 Vue.use(Icon)
 Vue.use(Row)
 Vue.use(Col)
-Vue.use(Badge)
+// Vue.use(Badge)
 Vue.use(Card)
 Vue.use(Container)
 Vue.use(Header)
