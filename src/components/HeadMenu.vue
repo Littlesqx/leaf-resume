@@ -1,30 +1,34 @@
 <style lang="less">
   .head-menu {
     float: right;
+    .el-submenu {
+      .el-menu-item {
+        min-width: 120px;
+        overflow: hidden;
+      }
+    }
   }
 </style>
 
 <template>
-  <el-menu :default-active="activeIndex" mode="horizontal" class="head-menu" @select="handleSelect">
-    <el-menu-item index="1">Leaf-resume</el-menu-item>
-    <el-submenu index="2">
+  <el-menu default-active="#"
+          background-color="#686868"
+          text-color="#fff"
+          active-text-color="#ffd04b" mode="horizontal" class="head-menu" @select="handleSelect">
+    <el-menu-item index="#">Leaf-resume</el-menu-item>
+    <el-submenu index="#about">
         <template slot="title">About</template>
-        <el-menu-item index="2-1">Github</el-menu-item>
-        <el-menu-item index="2-2">Author</el-menu-item>
+        <el-menu-item index="https://github.com/Littlesqx/leaf-resume">Github</el-menu-item>
+        <el-menu-item index="https://littlesqx.github.io">Author</el-menu-item>
     </el-submenu>
   </el-menu>
 </template>
 
 <script>
 export default {
-  data () {
-    return {
-      activeIndex: '1'
-    }
-  },
   methods: {
-    handleSelect (key, keyPath) {
-      console.log(key, keyPath)
+    handleSelect (key) {
+      key !== '#' && window.open(key)
     }
   }
 }

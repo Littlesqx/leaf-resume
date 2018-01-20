@@ -1,5 +1,5 @@
 <template>
-    <div class="button" @click="download">
+    <div class="button" @click="action()">
       <i class="el-icon-download"></i>
     </div>
 </template>
@@ -9,11 +9,11 @@
     position: fixed;
     bottom: @button-width;
     right: @button-width;
-    background: #3a8ee6;
+    background: #e6a23c;
     width: @button-width;
     height: @button-width;
     border-radius: 30px;
-    opacity: 0.7;
+    opacity: 0.8;
     cursor: pointer;
     transition: .3s;
     &:hover {
@@ -31,8 +31,6 @@
   }
 </style>
 <script>
-const JsPDF = require('jspdf')
-const html2canvas = require('html2canvas')
 export default {
   data () {
     return {
@@ -40,16 +38,8 @@ export default {
     }
   },
   methods: {
-    download () {
-      const dom = document.getElementById('template')
-      html2canvas(dom, {
-        onrendered: (canvas) => {
-          let page = canvas.toDataURL('image/jepg', 1.0)
-          let pdf = new JsPDF('', 'pt', 'a4')
-          pdf.addImage(page, 'JPEG', 0, 0, 595.28, 592.28 / canvas.width * canvas.height)
-          pdf.save('stone.pdf')
-        }
-      })
+    action () {
+      this.$emit('action')
     }
   }
 }

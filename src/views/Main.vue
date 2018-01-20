@@ -1,10 +1,18 @@
 <style lang="less">
     .el-header {
         border-right: none;
-        border-bottom: solid 1px #e6e6e6;
+        background: #686868;
+        border-bottom: solid 1px #686868;
+        -webkit-box-shadow: 0 2px 4px 0 rgba(0,0,0,.12), 0 0 6px 0 rgba(0,0,0,.04);
+        box-shadow: 0 2px 4px 0 rgba(0,0,0,.12), 0 0 6px 0 rgba(0,0,0,.04);
     }
     .main {
         padding: 20px;
+        .el-main {
+          padding: 0 0 0 20px;
+          -webkit-box-shadow: 0 2px 4px 0 rgba(0,0,0,.12), 0 0 6px 0 rgba(0,0,0,.04);
+          box-shadow: 0 2px 4px 0 rgba(0,0,0,.12), 0 0 6px 0 rgba(0,0,0,.04);
+        }
         .topic {
             display: inline-block;
             width: 100%;
@@ -35,7 +43,7 @@
         <el-main>
           <line-theme :options="resumeOptions()"></line-theme>
         </el-main>
-        <float-button></float-button>
+        <float-button @action="preview()"></float-button>
     </el-container>
   </el-container>
 </template>
@@ -46,19 +54,19 @@ import HeadMenu from '../components/HeadMenu.vue'
 import LeftAside from '../components/LeftAside.vue'
 import LineTheme from '../components/resume/line.vue'
 import FloatButton from '../components/FloatButton.vue'
-import config from '../config'
+import defaultConfig from '../config'
 
 export default {
   data () {
     return {
-      profile: config.profile,
-      experiences: config.experiences,
-      skills: config.skills,
+      profile: this.getProfile(),
+      experiences: this.getExperiences(),
       form: {
-        profile: config.profile,
-        experiences: config.experiences,
-        skills: []
-      }
+        profile: this.getProfile(),
+        experiences: this.getExperiences(),
+        skills: this.getSkills()
+      },
+      skills: defaultConfig.skills
     }
   },
   methods: {
@@ -72,6 +80,26 @@ export default {
         experiences: this.experiences,
         skills: this.form.skills
       }
+    },
+    preview () {
+      window.localStorage.setItem('options', JSON.stringify({
+        profile: this.profile,
+        experiences: this.experiences,
+        skills: this.form.skills
+      }))
+      window.open('#preview')
+    },
+    getProfile () {
+      let config = JSON.parse(window.localStorage.getItem('options')) || defaultConfig
+      return config.profile
+    },
+    getExperiences () {
+      let config = JSON.parse(window.localStorage.getItem('options')) || defaultConfig
+      return config.experiences
+    },
+    getSkills () {
+      let config = JSON.parse(window.localStorage.getItem('options')) || defaultConfig
+      return config.skills
     }
   },
   components: {
@@ -79,6 +107,7 @@ export default {
   },
   created () {
     // eslint-disable-next-line
+    console.log(this.cacheConfig)
   }
 }
 </script>
