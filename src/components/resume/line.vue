@@ -83,16 +83,14 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="less" scoped>
-@text-purple: #333;
+@text-grey: #333;
 #template {
     box-sizing: border-box;
     font-family:'Open Sans', sans-serif;
     h1, h2 {
-        /*font-family:'Open Sans Condensed', sans-serif;*/
         margin:0;
-        color: @text-purple;
+        color: @text-grey;
     }
 
     #name {
@@ -109,8 +107,8 @@ export default {
     }
 
     ul li {
-        color:@text-purple;
-        font-size:12px;
+        color:@text-grey;
+        font-size:13px;
     }
 
     a {
@@ -162,7 +160,7 @@ export default {
         padding: 10px 100px;
 
         #experience-title, #education-title, #skills-title {
-            font-size:26px;
+            font-size:24px;
             text-transform:uppercase;
         }
 
@@ -183,13 +181,13 @@ export default {
 
         .job-title, .degree {
             font-weight:700;
-            color: @text-purple;
+            color: @text-grey;
             font-size:16px;
         }
 
         .experience-timeperiod, .education-timeperiod {
             font-weight:100;
-            color: @text-purple;
+            color: @text-grey;
             font-size:16px;
         }
 
@@ -200,6 +198,7 @@ export default {
         #skill-list {
             column-count: 3;
             list-style-position: inside;
+            margin-left: 15px;
             ul li {
                 font-size:14px;
             }
@@ -229,7 +228,7 @@ export default {
 
 .spacer {
     width:100%;
-    border-bottom:1px solid @text-purple;
+    border-bottom:1px solid @text-grey;
     margin:5px 0 10px;
 
 }

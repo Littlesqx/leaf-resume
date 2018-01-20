@@ -1,5 +1,5 @@
 <style lang="less">
-  body {
+  .preview {
     #template {
       width: 22cm;
       #resume-footer {
@@ -11,7 +11,9 @@
 </style>
 
 <template>
-  <line-theme :options="resumeOptions()"></line-theme>
+  <div class="preview">
+    <line-theme :options="resumeOptions()"></line-theme>
+  </div>
 </template>
 
 <script>
