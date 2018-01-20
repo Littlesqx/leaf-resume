@@ -1,6 +1,28 @@
+body {
+    margin: 0;
+}
+
 .el-input__inner {
     border-top: none;
     border-left: none;
     border-right: none;
     border-radius: 0;
+}
+
+@theme-color: #6c6c6c;
+
+.el-tabs--border-card>.el-tabs__header .el-tabs__item:hover, 
+.el-tabs--border-card>.el-tabs__header .el-tabs__item.is-active,
+.el-checkbox__input.is-checked+.el-checkbox__label,
+.el-button.is-plain:focus, .el-button.is-plain:hover {
+    color: @theme-color;
+}
+.el-input.is-active .el-input__inner, .el-input__inner:focus,
+.el-checkbox__input.is-checked .el-checkbox__inner, .el-checkbox__input.is-indeterminate .el-checkbox__inner,
+.el-button.is-active, .el-button.is-plain:active,
+.el-button.is-plain:focus, .el-button.is-plain:hover {
+    border-color: @theme-color;
+}
+.el-checkbox__input.is-checked .el-checkbox__inner, .el-checkbox__input.is-indeterminate .el-checkbox__inner, {
+    background-color: @theme-color;
 }
