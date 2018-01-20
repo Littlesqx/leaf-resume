@@ -1,27 +1,27 @@
 # leaf-resume
 
-> A tool helps to create better resume.
+A online-tool helps to create better resume.
+
+[Live demo](https://littlesqx.github.io/leaf-resume/)
 
 ## Build Setup
 
 ``` bash
-# install dependencies
+git clone https://github.com/Littlesqx/leaf-resume.git
+
 npm install
 
-# serve with hot reload at localhost:8080
-npm run dev
+npm run dev # for dev
 
-# build for production with minification
-npm run build
+npm run build # for prod
 
-# build for production and view the bundle analyzer report
-npm run build --report
-
-# run unit tests
-npm run unit
-
-# run all tests
-npm test
 ```
+## Thanks
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+The resume theme is modifed from [@salomonelli - best-resume-ever/purple](https://github.com/salomonelli/best-resume-ever)
+
+Also, this project is based on the following packages
+
+[Vue](htts://vuejs.org)
+
+[Element](http://element.eleme.io)
