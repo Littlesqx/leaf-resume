@@ -1,10 +1,9 @@
 # leaf-resume
 
-A online-tool helps to create better resume.
+An online-tool helps to create better resume. [Live demo](https://littlesqx.github.io/leaf-resume/)
 
 ![](./static/0001.jpg)
 
-[Live demo](https://littlesqx.github.io/leaf-resume/)
 
 ## Build Setup
 
@@ -24,6 +23,4 @@ The resume theme is modifed from [@salomonelli - best-resume-ever/purple](https:
 
 Also, this project is based on the following packages
 
-[Vue](https://vuejs.org)
-
-[Element](http://element.eleme.io)
+[Vue](https://vuejs.org) / [Element](http://element.eleme.io)
