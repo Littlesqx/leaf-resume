@@ -2,6 +2,8 @@
 
 A online-tool helps to create better resume.
 
+![](./static/0001.jpg)
+
 [Live demo](https://littlesqx.github.io/leaf-resume/)
 
 ## Build Setup
